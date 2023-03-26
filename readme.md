@@ -9,8 +9,8 @@ This is template project for backend to build service api or other you want, thi
 ## Usage/Examples
 
 ```javascript
-npx express-api-starter-typescript my-project
-cd my-project
+git clone https://github.com/exsan172/express-api-starter-typescript
+cd express-api-starter-typescript
 
 // if you want run prod mode run with :
 yarn start
