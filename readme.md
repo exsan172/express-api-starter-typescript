@@ -59,5 +59,5 @@ yarn prettier
 
 ## Authors
 
-- [@exsan172](https://www.github.com/exsan172)
+- Exsan Renaldhi - [@exsan172](https://www.github.com/exsan172)
 
