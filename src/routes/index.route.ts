@@ -3,7 +3,7 @@
 */
 
 import express from "express"
-import Controllers from "../controllers/index.js"
+import Controllers from "../controllers/index.controller"
 
 const router = express.Router()
 

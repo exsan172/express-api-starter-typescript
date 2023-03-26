@@ -6,15 +6,17 @@ import dotenv from "dotenv"
 import express from "express"
 import loger from "morgan"
 import cors from "cors"
-import config from "./src/configs/index.js"
+import config from "./configs/index.config"
 
 // import router
-import Router from "./src/routes/index.js"
+import Router from "./routes/index.route"
 
 dotenv.config()
 const app = express()
 
-app.use(cors(config.env.ALLOW_CORS))
+app.use(cors({
+    origin : [config.env.ALLOW_CORS || "*"]
+}))
 app.use(loger("common"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -24,7 +26,7 @@ app.use(Router)
 
 // 404 handle
 app.use((req, res, next) => {
-    config.response(res, 404, "Path not found !")
+    config.response(res, 404, false, "path not found!")
 })
 
 // error handle
