@@ -6,12 +6,16 @@ import dotenv from "dotenv"
 import express from "express"
 import loger from "morgan"
 import cors from "cors"
-import config from "./configs/index.config"
+import config from "./configs"
 
 // import router
 import Router from "./routes/index.route"
 
 dotenv.config()
+
+// call database connection here
+// config.mongoose()
+
 const app = express()
 
 app.use(cors({

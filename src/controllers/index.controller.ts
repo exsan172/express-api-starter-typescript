@@ -2,7 +2,7 @@
     controller file, edit this file to write your controller
 */
 import { Request, Response } from "express"
-import config from "../configs/index.config"
+import config from "../configs"
 
 export default {
     getHelloWolrd: async (req:Request, res:Response, next) => {
